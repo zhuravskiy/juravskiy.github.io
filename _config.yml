@@ -1,1 +1,28 @@
-theme: jekyll-theme-architect
+theme: zhuravskiy.github.io
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - scss
+    - README.md
+    - start.sh
+    - zhuravskiy.github.io.gemspec
+    - zhuravskiy.github.io.iml
+
+#Pagination
+#paginate: 5
+#paginate_path: "/blog/page:num/"
+
+url: http://juravskiy.ru
+author: Vitaliy Zhuravskiy
+name: Vitaliy Zhuravskiy
+description: Blog
+disqus: juravskiy
+avatar: https://avatars0.githubusercontent.com/u/5353010?v=3&
+
+versions:
+  bootstrap: 3.3.7
+  font-awesome: 4.7.0
+
+social:
+  github: zhuravskiy

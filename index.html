@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+
+<div class="row">
+    <br>
+    <div class="col-md-2 col-sm-3 text-center">
+        <a class="story-title" href="{{ post.url }}">
+            <img alt="" src="{{ site.avatar }}s=100" style="width:100px;height:100px" class="img-circle">
+        </a>
+    </div>
+    <div class="col-md-10 col-sm-9">
+        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+        <div class="row">
+            <div class="col-xs-7">
+                <h4>
+
+                    {% for tag in post.categories %}
+
+                        <a class="label label-default label-block" href="/categories/{{ tag | downcase }}.html">
+                            <span >
+                            {{ tag }}
+                                </span>
+                        </a>
+
+                    {% endfor %}
+                </h4>
+                <h4>
+                    <small style="font-family:courier,'new courier';" class="text-muted">• <a href="{{ post.url }}" class="text-muted">Read More</a></small>
+                </h4>
+            </div>
+            <div class="col-xs-5">{{ post.content | truncatewords:40 | strip_html }}</div>
+        </div>
+        <br><br>
+    </div>
+</div>
+<hr>
+{% endfor %}

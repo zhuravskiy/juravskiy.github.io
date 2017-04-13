@@ -1,0 +1,16 @@
+---
+ layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
+    </url>
+    {% endfor %} {% assign pages = site.pages |  where_exp:"item", "item.layout != nil" %} {% assign pages = pages |  where_exp:"item", "item.layout != 'redirect'" %}
+    {% for page in pages %}
+    <url>
+        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+    </url>
+    {% endfor %}
+</urlset>
